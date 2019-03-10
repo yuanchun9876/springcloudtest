@@ -1,0 +1,21 @@
+server:
+  port: 8767
+ 
+eureka:
+  client:
+    sericeUrl:
+      defaultZone: http://localhost:8761/eureka/
+ 
+  
+spring:
+  cloud:
+    config:
+      label: master
+      server: 
+        git:
+          uri: https://github.com/yuanchun9876/springcloudconfig.git
+          #searchPaths: 
+          #username:
+          #password: 
+  application:
+    name: config-server
